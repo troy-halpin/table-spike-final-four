@@ -10,7 +10,11 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "faker": "^4.1.0",
     "react": "^16.13.1",
+    "react-base-table": "^1.9.3",
+    "react-data-grid": "6.0.0",
+    "react-data-grid-addons": "6.0.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "typescript": "~3.7.2"
@@ -28,12 +32,17 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "ie 11"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie 11"
     ]
   }
 }
