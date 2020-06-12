@@ -37,7 +37,6 @@ const fixedColumns = columns.map((column, columnIndex) => {
 })
 
 export function ReactBaseTable() {
-  console.log(data)
   return (
     <BaseTable
       width={1000}

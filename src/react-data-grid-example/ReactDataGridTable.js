@@ -72,8 +72,8 @@ const columns = [
   },
 ]
 
-const ROW_COUNT = 50
-const rows = createRowData(50)
+const ROW_COUNT = 1000
+const rows = createRowData(ROW_COUNT)
 
 export function ReactDataGridTable() {
   return (
