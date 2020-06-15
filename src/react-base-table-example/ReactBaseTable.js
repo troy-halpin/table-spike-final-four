@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Font } from '@procore/core-react'
 import BaseTable, { Column } from 'react-base-table'
 import 'react-base-table/styles.css'
 
@@ -33,7 +33,11 @@ const fixedColumns = columns.map((column, columnIndex) => {
   let frozen
   if (columnIndex < 2) frozen = Column.FrozenDirection.LEFT
   if (columnIndex > 8) frozen = Column.FrozenDirection.RIGHT
-  return { ...column, frozen }
+  return {
+    ...column,
+    frozen,
+    cellRenderer: ({ cellData: value }) => <Font>{value}</Font>,
+  }
 })
 
 export function ReactBaseTable() {
