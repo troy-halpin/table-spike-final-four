@@ -1,9 +1,22 @@
 import React from 'react'
 import ReactDataGrid from 'react-data-grid'
+import { Link, Font, Notation } from '@procore/core-react'
 
 import createRowData from './createRowData'
 
 const COLUMN_WIDTH = 140
+
+const TitleFormatter = ({ value }) => {
+  return <Font>{value}</Font>
+}
+
+const FirstNameFormatter = ({ value }) => {
+  return <Notation>{value}</Notation>
+}
+
+const LastNameFormatter = ({ value }) => {
+  return <Link>{value}</Link>
+}
 
 const columns = [
   {
@@ -17,18 +30,21 @@ const columns = [
     name: 'Title',
     frozen: true,
     width: COLUMN_WIDTH,
+    formatter: TitleFormatter,
   },
   {
     key: 'firstName',
     name: 'First Name',
     frozen: true,
     width: COLUMN_WIDTH,
+    formatter: FirstNameFormatter,
   },
   {
     key: 'lastName',
     name: 'Last Name',
     frozen: true,
     width: COLUMN_WIDTH,
+    formatter: LastNameFormatter,
   },
   {
     key: 'email',
